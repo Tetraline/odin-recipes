@@ -15,7 +15,7 @@ div.description{
 }
 
 a:link, a:visited, a:hover, a:active {
-   color: black 
+   color: black !important
 }
 
 
