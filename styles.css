@@ -14,18 +14,32 @@ div.description{
   text-align: left;
 }
 
-a:link, a:visited, a:hover, a:active {
-   color: black !important
-}
-
-
 .important {
   color: red;
   font-size: x-small;
 }
 
-button {
- background-color: green; 
- font-weight: bold;
+a:link, a:visited, a:hover, a:active, button:link, button:visited, button:hover, button:active{
+   color: black 
+}
+
+.links a:hover{
+  background-color: red;
+}
+
+
+li {
+  display:inline-block;
+}
+
+.links a{
+  display:flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+  min-width: 140px;
+  min-height: 80px;
+  box-sizing: border-box;
 
 }
