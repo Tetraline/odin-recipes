@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        /*
+         div {
+            border:1px solid blue;
+        } 
+        */
+        body {
+          max-width: 60ch;
+          text-align: left;
+        }
+        div.outer {
+            border:2px solid black;
+        }
+        div.one {
+            border:2px solid blue;
+            display:block;
+        }
+        div.two {
+            border:2px solid blue; 
+            display:inline
+        }
+        div.three {
+            border:2px solid blue; 
+            display:inline-block
+        }
+        div.ingredient {
+            padding:2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>
+        There are three main display parameters available to give to css boxes:
+    </p>
+        <ul>
+            <li>block</li>
+            <li>inline</li>
+            <li>inline-block</li>
+        </ul>
+    <p>
+        These are slightly confusing so let's give an example of each one. 
+    </p>
+    <p>To demonstrate, let's put the words 'cheese' and 'sauce' into their own boxes in the following sentence. Boxes will be outlined with blue outlines. </p>
+    <p><strong>'Two ingredients in pizza are cheese and sauce. Pizza is of Italian origin.'</strong> </p> 
+    <p>Our two ingredient words will be outlined with blue, while the broader sentence will be outlined in black. Onto every ingredient element we will try to apply some padding, with the CSS:</p>
+    <pre>
+      <code>
+        div.ingredient {
+            padding:2em;
+        }
+      </code>
+    </pre>
+    <h3>display: block</h3> 
+    <p>This is the default way that boxes arrange themselves, from top to bottom with a new line for each box. We can see that the request for padding around the words 'cheese' and 'sauce' were granted.</p>
+
+    <div class="outer">
+        Two ingredients in pizza are <div class="ingredient one">cheese</div> and <div class="ingredient one">sauce</div>. Pizza is of Italian origin.
+    </div>
+    
+    <h3>display: inline</h3>
+    <p>The inline setting allows a box, or multiple boxes, to be included in one coherent line. The requested horizontal padding was granted, but the vertical padding was not respected.</p>
+    <div class="outer">
+        Two ingredients in pizza are <div class="ingredient two">cheese</div> and <div class="ingredient two">sauce</div>. Pizza is of Italian origin.
+    </div>
+
+    <h3>display: inline-block</h3>
+    <p>The inline-block setting is a hybrid, the two ingredients appear on the same line as the rest of the sentence and the requested padding is respected in all directions. </p>
+    <div class="outer">
+        Two ingredients in pizza are <div class="ingredient three">cheese</div> and <div class="ingredient three">sauce</div>. Pizza is of Italian origin.
+    </div>
+
+    <a href="../index.html">HOMEPAGE</a>
+</body>
+
+</html>
