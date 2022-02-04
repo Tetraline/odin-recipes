@@ -28,7 +28,7 @@ a:link, a:visited, a:hover, a:active, button:link, button:visited, button:hover,
 }
 
 
-li {
+li.menu {
   display:inline-block;
 }
 
@@ -42,4 +42,8 @@ li {
   min-height: 80px;
   box-sizing: border-box;
 
+}
+
+ul.links{
+  list-style-type: none;;
 }
